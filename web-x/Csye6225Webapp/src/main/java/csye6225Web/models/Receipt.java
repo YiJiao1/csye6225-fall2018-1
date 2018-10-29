@@ -11,7 +11,7 @@ import org.hibernate.annotations.OnDeleteAction;
 import javax.persistence.*;
 
 @Entity
-@Table(name="Receipts")
+@Table(name="receipts")
 public class Receipt {
 
     @Id
@@ -30,7 +30,14 @@ public class Receipt {
     private String url;
 
 
-    public Receipt() {}
+    public Receipt() {
+
+    }
+
+    public Receipt(String id, String url) {
+        this.id = id;
+        this.url = url;
+    }
 
     public Receipt(String id, Transaction transaction, String url){
         this.transaction=transaction;
