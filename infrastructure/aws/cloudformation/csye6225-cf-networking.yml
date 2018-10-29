@@ -1,49 +1,74 @@
 
-[
+Resources:
+  LeoNetworkCsye6225Vpc:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: 192.168.0.0/16
+  csye6225Subnet1:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      CidrBlock: 192.168.0.0/24
+      AvailabilityZone: us-east-1a
+      VpcId:
+        Ref: LeoNetworkCsye6225Vpc
+  csye6225Subnet2:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      CidrBlock: 192.168.1.0/24
+      AvailabilityZone: us-east-1b
+      VpcId:
+        Ref: LeoNetworkCsye6225Vpc
+  csye6225Subnet3:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      CidrBlock: 192.168.2.0/24
+      AvailabilityZone: us-east-1c
+      VpcId:
+        Ref: LeoNetworkCsye6225Vpc
+  LeoNetworkCsye6225InternetGateway:
+    Type: 'AWS::EC2::InternetGateway'
+  VPCGatewayAttachment:
+    Type: 'AWS::EC2::VPCGatewayAttachment'
+    Properties:
+      VpcId: !Ref LeoNetworkCsye6225Vpc
+      InternetGatewayId: !Ref LeoNetworkCsye6225InternetGateway
+  LeoNetworkCsye6225PublicRouteTable:
+    Type: 'AWS::EC2::RouteTable'
+    Properties:
+      VpcId: !Ref LeoNetworkCsye6225Vpc
+  SubnetRouteAssociation1:
+    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Properties:
+      RouteTableId: !Ref LeoNetworkCsye6225PublicRouteTable
+      SubnetId: !Ref csye6225Subnet1
+  SubnetRouteAssociation2:
+    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Properties:
+      RouteTableId: !Ref LeoNetworkCsye6225PublicRouteTable
+      SubnetId: !Ref csye6225Subnet2
+  SubnetRouteAssociation3:
+    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Properties:
+      RouteTableId: !Ref LeoNetworkCsye6225PublicRouteTable
+      SubnetId: !Ref csye6225Subnet3
+  AddGatewayRoute:
+    Type: 'AWS::EC2::Route'
+    Properties:
+      RouteTableId: !Ref LeoNetworkCsye6225PublicRouteTable
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref LeoNetworkCsye6225InternetGateway
 
-{
- "ParameterKey": "vpcID",
- "ParameterValue": "vpc-0b7c4a98e10e6bd82"
-},
-{
- "ParameterKey": "DBuserName",
- "ParameterValue": "root"
-},
-{
- "ParameterKey": "DBpassword",
- "ParameterValue": "leo38377"
-},
-{
- "ParameterKey": "subnetID1",
- "ParameterValue": "subnet-07d892a3969949954"
-},
-{
- "ParameterKey": "subnetID2",
- "ParameterValue": "subnet-0e982380ae839ce9a"
-},
-{
- "ParameterKey": "subnetID3",
- "ParameterValue": "subnet-0cd14062606da68bd"
-},
-{
- "ParameterKey": "subnetID",
- "ParameterValue": "subnet-07d892a3969949954"
-},
-{
- "ParameterKey": "KeyName",
- "ParameterValue": "csye6225Leo"
-},
-{
- "ParameterKey": "HostedZoneName",
- "ParameterValue": "csye6225-fall2018-chengl.me."
-},
-
-{
-"ParameterKey": "instanceProfile",
-"ParameterValue":"LeoCICD-InstanceProfile-T3GNEI7KK6NH"
-}
-
-
-]
-
+Outputs:
+  VPCId:
+    Description: vpcID
+    Value: !Ref LeoNetworkCsye6225Vpc
+  SubnetID1:
+    Description: SubnetID_1
+    Value: !Ref csye6225Subnet1
+  SubnetID2:
+    Description: SubnetID_2
+    Value: !Ref csye6225Subnet2
+  SubnetID3:
+    Description: SubnetID_3
+    Value: !Ref csye6225Subnet3
 

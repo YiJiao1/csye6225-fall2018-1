@@ -122,6 +122,10 @@ cat >csye6225-cf.conf<<EOF
 EOF
 
 
+rm /tmp/leonetwork.log
+rm /tmp/leocicd.log
+
+
 exit 0
 
 

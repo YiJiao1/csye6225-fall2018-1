@@ -4,14 +4,12 @@
     "merchant": "mcdonald",
     "amount": "1.50",
     "date": "09/25/2018",
-    "category": "drinks"
+    "category": "drinks",
     "attachments":[
 	    {
-		"url" : "~/mys3bucket/image1.jpg"
-	    },
-	    {
-                "url" : "~/mys3bucket/image2.jpg"
+		"url" : "http://s3.amazonaws.com/csye6225-fall2018-chengl.me.com/receipt1.jpg"
 	    }
+	    
     ]
 
 
