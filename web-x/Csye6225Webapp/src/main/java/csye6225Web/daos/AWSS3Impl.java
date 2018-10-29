@@ -17,10 +17,8 @@ import java.net.URL;
 public class AWSS3Impl implements AWSS3 {
     private static String rootPath = "/Users/xingli/Desktop/neu/class/2018fall/CSYE6225cloudcomputing/test";
     private static String BUCKET_NAME   = "csye6225-fall2018-lixing1.me.csye6225.com";
-    //private static String ACCESS_KEY    = "AKIAIMCXJCWJTC33JD4Q";
-    //private static String SECRET_KEY    = "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";
-    private static String ACCESS_KEY    = "AKIAJM3UVUH37VK7LTEQ";
-    private static String SECRET_KEY    = "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";
+    private static String ACCESS_KEY    = "";
+    private static String SECRET_KEY    = "";
 
     final String ENDPOINT = "s3.us-east-1.amazonaws.com";
 
