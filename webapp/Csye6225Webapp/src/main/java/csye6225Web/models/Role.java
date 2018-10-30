@@ -17,4 +17,8 @@
 //
 //    private String name;
 //
+////    public String Role(String name) {
+//////        this.name = name;
+//////        return name;
+//////    }
 //}

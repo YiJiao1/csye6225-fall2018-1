@@ -1,10 +1,7 @@
 
-
 {
-
-"attachments":[
-            {
-                "url" : "http://s3.amazonaws.com/csye6225-fall2018-chengl.me.com/receipt2.jpg"
-            }
-    ]
+  
+	"url" : "http://s3.amazonaws.com/csye6225-fall2018-chengl.me.com/receipt2.jpg"
+ 
 }
+ 
