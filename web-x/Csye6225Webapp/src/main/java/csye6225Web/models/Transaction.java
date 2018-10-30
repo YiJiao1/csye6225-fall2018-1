@@ -13,8 +13,10 @@ public class Transaction {
     @Id
     @GeneratedValue
     private String id;
+
     //@ManyToOne
-    //private User user;
+
+    private String user_id;
     private String description;
     private String merchant;
     private String amount;
@@ -27,16 +29,26 @@ public class Transaction {
     public Transaction() {
     }
 
-
-    public Transaction(String id, String description, String merchant,
-                       String amount, String date, String category, ArrayList<Receipt> attachments) {
+    public Transaction(String id, String description, String merchant, String amount, String date, String category, String user_id) {
         this.id = id;
-        //this.user = new User();
-        this.merchant = merchant;
         this.description = description;
+        this.merchant = merchant;
         this.amount = amount;
         this.date = date;
         this.category = category;
+        this.user_id = user_id;
+    }
+
+    public Transaction(String id, String description, String merchant,
+                       String amount, String date, String category, String user_id, ArrayList<Receipt> attachments) {
+        this.id = id;
+        //this.user = new User();
+        this.description = description;
+        this.merchant = merchant;
+        this.amount = amount;
+        this.date = date;
+        this.category = category;
+        this.user_id = user_id;
         this.attachments=attachments;
 
     }
@@ -52,6 +64,14 @@ public class Transaction {
         this.attachments.remove(receipt);
         receipt.setTransaction(null);
 
+    }
+
+    public String getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(String user_id) {
+        this.user_id = user_id;
     }
     public List<Receipt> getAttachments() {
         return attachments;
@@ -86,18 +106,6 @@ public class Transaction {
         return merchant;
     }
 
-
-
-    public String getUserid() {
-        return "";
-    }
-
-    public void setUserid(String userid) {
-        //this.userid = userid;
-    }
-
-
-
     public void setId(String id) {
         this.id = id;
     }
@@ -120,6 +128,24 @@ public class Transaction {
 
     public void setMerchant(String merchant) {
         this.merchant = merchant;
+    }
+
+
+    @Override
+    public String toString() {
+        String rst = "";
+        rst += this.id + "  ";
+        rst += this.description + "  ";
+        rst += this.amount + "  ";
+        rst += this.date + "  ";
+        rst += this.merchant + "  ";
+        rst += this.category + "  ";
+        List<Receipt> receipts = this.getAttachments();
+        for (Receipt rc:receipts) {
+            rst += rc.getId() + "  ";
+            rst += rc.getUrl() + "  ";
+        }
+        return rst;
     }
 
 }

@@ -10,20 +10,47 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
-@ToString
 @Table(name = "user")
-public class User extends BaseEntity{
+public class User {
     private String username;
     private String password;
-    @OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
-    private List<Role> roles;
+//    @OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
+//    private List<Role> roles;
     private boolean active;
     //@OneToMany
+    @Id
+    @GeneratedValue
     private String userid;
+    //@OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
+   // @Column(nullable = true)
+    //private List<Transaction> transactions;
+
+    public User() {
+
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public User(String username, String password, boolean active, String userid) {
+        this.username = username;
+        this.password = password;
+        this.active = active;
+        this.userid = userid;
+    }
+
+//    public List<Transaction> getTransactions() {
+//        return transactions;
+//    }
+//
+//    public void setTransactions(List<Transaction> transactions) {
+//        this.transactions = transactions;
+//    }
 
 
     public String getUserid() {
@@ -52,12 +79,9 @@ public class User extends BaseEntity{
         this.password = password;
     }
 
-    public boolean isActive() {
-        return true;
-    }
 
-    public List<Role> getRoles() {
-        return new ArrayList<Role>();
-
-    }
+//    public List<Role> getRoles() {
+//        return new ArrayList<Role>();
+//
+//    }
 }
