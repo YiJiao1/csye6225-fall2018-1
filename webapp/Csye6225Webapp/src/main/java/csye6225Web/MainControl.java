@@ -1,12 +1,13 @@
 package csye6225Web;
-
+import csye6225Web.daos.AWSRDSImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 //import org.springframework.boot.CommandLineRunner;
 //import org.springframework.context.annotation.Bean;
@@ -39,17 +40,19 @@ public class MainControl extends SpringBootServletInitializer{
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-
+        // 注意这里要指向原先用main方法执行的Application启动类
         return builder.sources(MainControl.class);
     }
 
+    public PasswordEncoder getPasswordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
 
+    public static void main(String[] args) {
+        AWSRDSImpl awsrds = AWSRDSImpl.getInstance();
+        awsrds.setupDatabase();
 
-
-    public static void main(String[] args)
-    {
-
-        SpringApplication.run(MainControl.class,args);
+        SpringApplication.run(MainControl.class, args);
     }
 
 
