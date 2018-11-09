@@ -42,6 +42,10 @@ public class MainControl extends SpringBootServletInitializer{
 
     public static void main(String[] args) {
 
+
+        AWSRDSImpl awsrds=AWSRDSImpl.getInstance();
+        awsrds.setupDatabase();
+
         SpringApplication.run(MainControl.class, args);
     }
 
