@@ -5,46 +5,45 @@
       <change beforePath="$PROJECT_DIR$/../../.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.travis.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../afterInstall.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../afterInstall.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../appspec.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../appspec.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/csye6225webapp.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/MainControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csye6225Web/MainControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/MyConnection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/config/AuthorizationServerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/config/PropertyUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/config/ResourceServerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/config/WebSecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/daos/AWSRDSDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/daos/AWSRDSImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/daos/AWSS3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/daos/AWSS3Impl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/daos/LocalDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/daos/LocalImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/daos/ReceiptDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/daos/ReceiptImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/daos/TransactionDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/daos/TransactionImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/daos/UserDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/daos/UserImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/models/Receipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csye6225Web/models/Receipt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/models/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csye6225Web/models/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/models/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/models/receip.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/repositories/ReceiptRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csye6225Web/repositories/ReceiptRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/repositories/TransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csye6225Web/repositories/TransactionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/repositories/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/HomeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/ReceiptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/ReceiptController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/ServicesController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/TransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/TransactionControllerUseDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/services/CustomUserDetailsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/services/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/testControl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/MainControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/MainControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/MyConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/config/AuthorizationServerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/config/PropertyUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/config/ResourceServerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/config/WebSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/daos/AWSRDSDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/daos/AWSRDSImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/daos/AWSS3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/daos/AWSS3Impl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/daos/LocalDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/daos/LocalImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/daos/ReceiptDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/daos/ReceiptImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/daos/TransactionDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/daos/TransactionImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/daos/UserDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/daos/UserImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/models/Receipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/models/Receipt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/models/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/models/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/models/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/models/receip.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/repositories/ReceiptRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/repositories/ReceiptRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/repositories/TransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/repositories/TransactionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/repositories/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/serviceController/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/serviceController/ReceiptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/serviceController/ReceiptController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/serviceController/ServicesController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/serviceController/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/serviceController/TransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/serviceController/TransactionControllerUseDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/services/CustomUserDetailsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/services/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/java/csye6225Web/testControl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webapp/Csye6225Webapp/web/index.jsp" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -99,7 +98,7 @@
     <session id="-833317390">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="27" />
+          <entry key="project.closed" value="26" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.105" value="1" />
           <entry key="project.open.time.109" value="1" />
@@ -196,6 +195,7 @@
     <session id="673857270">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -216,81 +216,8 @@
       </usages-collector>
     </session>
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="Csye6225Webapp" />
-  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/testControl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/MyConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/MainControl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="132" column="15" lean-forward="true" selection-start-line="132" selection-start-column="15" selection-end-line="132" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/config/AuthorizationServerConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/config/PropertyUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -352,20 +279,20 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="27" />
-    <option name="y" value="511" />
-    <option name="width" value="1893" />
-    <option name="height" value="789" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="70" />
+    <option name="y" value="118" />
+    <option name="width" value="1717" />
+    <option name="height" value="962" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -373,95 +300,15 @@
               <item name="Csye6225Webapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="Csye6225Webapp" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Csye6225Webapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Csye6225Webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Csye6225Webapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Csye6225Webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Csye6225Webapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Csye6225Webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Csye6225Webapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Csye6225Webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="csye6225Web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Csye6225Webapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Csye6225Webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="csye6225Web" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Csye6225Webapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Csye6225Webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="csye6225Web" type="462c0819:PsiDirectoryNode" />
-              <item name="daos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Csye6225Webapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Csye6225Webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="csye6225Web" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Csye6225Webapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Csye6225Webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="csye6225Web" type="462c0819:PsiDirectoryNode" />
-              <item name="repositories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Csye6225Webapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Csye6225Webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="csye6225Web" type="462c0819:PsiDirectoryNode" />
-              <item name="serviceController" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Csye6225Webapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Csye6225Webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541730415818" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541467729280" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../webapp/Csye6225Webapp" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -524,10 +371,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="70" y="118" width="1717" height="962" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29059318" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19070514" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -536,7 +382,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33848533" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24039517" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -552,7 +398,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" visible="true" weight="0.045528457" />
+      <window_info anchor="right" id="Maven Projects" order="7" visible="true" weight="0.044871796" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -603,13 +449,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/config/WebSecurityConfig.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/models/Role.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/models/BaseEntity.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/config/AuthorizationServerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/config/AuthorizationServerConfig.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/config/ResourceServerConfig.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/repositories/UserRepository.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/services/CustomUserDetailsService.java" />
@@ -647,31 +487,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
           <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/MainControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/MainControl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="490">
+          <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/UserController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="132" column="15" lean-forward="true" selection-start-line="132" selection-start-column="15" selection-end-line="132" selection-end-column="15" />
+        <state relative-caret-position="-223">
+          <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
         </state>
       </provider>
     </entry>
