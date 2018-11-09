@@ -1,0 +1,19 @@
+
+
+
+
+Resources:
+  myDynamoDBTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      AttributeDefinitions:
+      - AttributeName: 'userName'
+        AttributeType: 'S'
+      KeySchema:
+      - AttributeName: 'userName'
+        KeyType: HASH
+      ProvisionedThroughput:
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
+      TableName: "UserTable"
+

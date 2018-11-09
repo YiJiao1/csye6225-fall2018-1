@@ -210,6 +210,11 @@ Resources:
           Action:
           - s3:*
           Resource: "*"
+        - Sid: lambdaToDynamodb
+          Effect: Allow
+          Action:
+          - dynamodb:*
+          Resource: "*"
       Users:
       - !Ref LambdaCIUser
 
@@ -261,6 +266,11 @@ Resources:
             Effect: Allow
             Action:
             - s3:*
+            Resource: "*"
+          - Sid: lambdaToDynamodb
+            Effect: Allow
+            Action:
+            - dynamodb:*
             Resource: "*"
       AssumeRolePolicyDocument:
         Statement:

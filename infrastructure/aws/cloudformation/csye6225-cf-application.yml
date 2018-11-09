@@ -134,19 +134,22 @@ Resources:
     Type: AWS::S3::Bucket
     Properties:
       BucketName: 'csye6225-fall2018-chengl.me.csye6225.com'
-      AccessControl: PublicRead
+      AccessControl: PublicRead    
+
   myDynamoDBTable:
     Type: AWS::DynamoDB::Table
     Properties:
       AttributeDefinitions:
-      - AttributeName: 'id'
-        AttributeType:  'S'
+      - AttributeName: 'userName'
+        AttributeType: 'S'
       KeySchema:
-      - AttributeName: 'id'
+      - AttributeName: 'userName'
         KeyType: HASH
       ProvisionedThroughput:
-        ReadCapacityUnits: 1
-        WriteCapacityUnits: 1
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
+      TableName: "UserTable"
+
   DBSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -178,6 +181,24 @@ Resources:
       DBSubnetGroupName: !Ref myDBSubnetGroup
       VPCSecurityGroups:
       - !Ref DBSecurityGroup
+
+  Csye6225Topic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: "Csye6225Topic"
+      Subscription:
+      - Endpoint: arn:aws:lambda:us-east-1:398590284929:function:Csye6225LambdaFunction
+        Protocol: lambda
+
+  LambdaInvokePermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      Principal: sns.amazonaws.com
+      SourceArn: !Ref Csye6225Topic
+      FunctionName: arn:aws:lambda:us-east-1:398590284929:function:Csye6225LambdaFunction
+
+
 
 
 Outputs:
