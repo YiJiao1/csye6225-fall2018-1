@@ -2,6 +2,9 @@ package csye6225Web.serviceController;
 
 
 import csye6225Web.models.Transaction;
+import csye6225Web.repositories.UserRepository;
+import csye6225Web.services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,16 +21,26 @@ import java.util.UUID;
 public class UserController {
 
 
+//    @Autowired
+//    private UserRepository userRepository;
+
+    @Autowired
+    private UserService userService;
 
     @PostMapping("/user/register")
-    public ResponseEntity<Object> createNewTransaction(@RequestHeader(value="username",required = true) String username,
-                                                       @RequestHeader(value="password",required = true) String password)
+    public ResponseEntity<Object> userRegister(@RequestHeader(value="username",required = true) String username,
+                                               @RequestHeader(value="password",required = true) String password)
     {
 
-        return ResponseEntity.status(HttpStatus.OK).body("Register success!!");
+        if(userService.userNameExist(username))
+        {
+            return ResponseEntity.status(HttpStatus.OK).body("User exist!\n");
+        }
+
+        userService.saveUser(username,password);
+        return ResponseEntity.status(HttpStatus.OK).body("Register success!!\n");
 
     }
-
 
 
 
@@ -36,6 +49,12 @@ public class UserController {
                                                 @RequestHeader(value="password",required = true) String password)
 
     {
+
+            if(!userService.userIsValid(username,password))
+            {
+                return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Invalid Username and Password\n");
+            }
+
 
             ResourcePropertySource propertySource2=null;
             try
@@ -60,7 +79,7 @@ public class UserController {
             {
                 PublishResult publishResult=snsClient.publish(publishRequest);
                 System.out.println(publishResult.toString());
-                String returnString="Rest password link sent to "+username;
+                String returnString="Rest password link sent to "+username+"\n";
                 return ResponseEntity.status(HttpStatus.OK).body(returnString);
             }
             catch (Exception e)

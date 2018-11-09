@@ -40,7 +40,7 @@ public class TransactionController {
 
        Optional<Transaction> transaction=transactionRepository.findById(id);
         if (!transaction.isPresent()) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Id NOT FOUND\n");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("ID NOT FOUND\n");
         } else {
             return ResponseEntity.status(HttpStatus.OK).body(transaction);
         }
