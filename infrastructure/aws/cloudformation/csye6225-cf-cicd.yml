@@ -9,7 +9,10 @@ Resources:
         - Effect: Allow
           Action:
           - s3:*
-          - cloudformation:*
+          - cloudwatch:*
+          - ec2:*
+          - logs:*
+          - ssm:*
           Resource: "*"
       Roles:
       - !Ref EC2ServiceRole 
@@ -81,6 +84,11 @@ Resources:
           Action:
           - SNS:Publish
           Resource: arn:aws:sns:us-east-1:398590284929:Csye6225Topic
+        - Effect: Allow
+          Action:
+          - cloudwatch:*
+          - logs:*
+          Resource: "*"
       Users:
       - !Ref CIUser
 

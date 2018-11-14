@@ -104,8 +104,6 @@
 
 
 
-
-
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
@@ -116,9 +114,6 @@
             <artifactId>aws-java-sdk</artifactId>
             <version>1.11.327</version>
         </dependency>
-
-
-
 
 
 
