@@ -1,5 +1,8 @@
 package csye6225Web;
 
+import csye6225Web.daos.AWSRDSImpl;
+import csye6225Web.daos.AWSS3;
+import csye6225Web.daos.AWSS3Impl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -8,7 +11,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import csye6225Web.models.User;
-import csye6225Web.models.Role;
 import csye6225Web.services.UserService;
 import java.util.Arrays;
 
@@ -36,12 +38,15 @@ public class MainControl {
 //        };
 //    }
 
+
     @Bean
     public PasswordEncoder getPasswordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
     public static void main(String[] args) {
+        AWSRDSImpl awsrds = AWSRDSImpl.getInstance();
+        awsrds.setupDatabase();
 
         SpringApplication.run(MainControl.class, args);
     }
