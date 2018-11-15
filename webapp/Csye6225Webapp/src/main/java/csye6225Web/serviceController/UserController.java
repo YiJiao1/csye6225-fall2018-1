@@ -69,6 +69,19 @@ public class UserController {
 
         }
 
+
+
+    @GetMapping("/test")
+    public ResponseEntity<Object> test()
+
+    {
+            return ResponseEntity.status(HttpStatus.OK).body("Hello World\n");
+
+    }
+
+
+
+
     }
 
 

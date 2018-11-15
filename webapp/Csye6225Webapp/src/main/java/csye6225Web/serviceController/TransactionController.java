@@ -5,6 +5,7 @@ import csye6225Web.models.Transaction;
 import csye6225Web.repositories.ReceiptRepository;
 import csye6225Web.repositories.TransactionRepository;
 import csye6225Web.services.CloudWatchService;
+import csye6225Web.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,6 +30,9 @@ public class TransactionController {
     @Autowired
     CloudWatchService cloudWatchService;
 
+    @Autowired
+    UserService userService;
+
     Double get_transactions=0.0;
     Double get_transaction=0.0;
     Double post_transaction=0.0;
@@ -36,10 +40,12 @@ public class TransactionController {
     Double delete_transaction=0.0;
 
     @GetMapping("/transactions")
-    public List<Transaction> getAllTransactions() {
+    public List<Transaction> getAllTransactions(@RequestHeader(value="username",required = true) String username,
+                                                @RequestHeader(value="password",required = true) String password)
+    {
 
         cloudWatchService.putMetricData("GetRequest","/transactions",++get_transactions);
-
+        if(!userService.userIsValid(username,password)){return null;}
         return transactionRepository.findAll();
 
     }
@@ -47,9 +53,13 @@ public class TransactionController {
 
 
     @GetMapping("/transaction/{id}")
-    public ResponseEntity<Object> getTransaction(@PathVariable(value="id") Long id) {
+    public ResponseEntity<Object> getTransaction(@RequestHeader(value="username",required = true) String username,
+                                                 @RequestHeader(value="password",required = true) String password,
+                                                 @PathVariable(value="id") Long id)
+    {
 
         cloudWatchService.putMetricData("GetRequest","/transaction/{id}",++get_transaction);
+        if(!userService.userIsValid(username,password)){return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username and password");}
 
        Optional<Transaction> transaction=transactionRepository.findById(id);
         if (!transaction.isPresent()) {
@@ -62,11 +72,13 @@ public class TransactionController {
 
 
     @PostMapping("/transaction")
-    public ResponseEntity<Object> createNewTransaction(@RequestBody Transaction transaction) {
-
+    public ResponseEntity<Object> createNewTransaction(@RequestHeader(value="username",required = true) String username,
+                                                       @RequestHeader(value="password",required = true) String password,
+                                                       @RequestBody Transaction transaction)
+    {
 
         cloudWatchService.putMetricData("PostRequest","/transaction",++post_transaction);
-
+        if(!userService.userIsValid(username,password)){return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username and password");}
 
         try {
 
@@ -87,11 +99,14 @@ public class TransactionController {
 
 
     @PutMapping("/transaction/{id}")
-    public ResponseEntity<Object> updateTransaction(@RequestBody Transaction transaction ,@PathVariable Long id)
+    public ResponseEntity<Object> updateTransaction(@RequestHeader(value="username",required = true) String username,
+                                                    @RequestHeader(value="password",required = true) String password,
+                                                    @RequestBody Transaction transaction ,@PathVariable Long id)
     {
 
 
         cloudWatchService.putMetricData("PutRequest","/transaction/{id}",++put_transaction);
+        if(!userService.userIsValid(username,password)){return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username and password");}
 
         Optional<Transaction> old_transaction=transactionRepository.findById(id);
 
@@ -118,10 +133,13 @@ public class TransactionController {
 
 
     @DeleteMapping("transaction/{id}")
-    public ResponseEntity<Object> deleteTransaction(@PathVariable Long id)
+    public ResponseEntity<Object> deleteTransaction(@RequestHeader(value="username",required = true) String username,
+                                                    @RequestHeader(value="password",required = true) String password,
+                                                    @PathVariable Long id)
     {
 
         cloudWatchService.putMetricData("DeleteRequest","/transaction/{id}",++delete_transaction);
+        if(!userService.userIsValid(username,password)){return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username and password");}
 
         Optional<Transaction> transaction=transactionRepository.findById(id);
         if (!transaction.isPresent())

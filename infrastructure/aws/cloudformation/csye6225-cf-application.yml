@@ -99,11 +99,6 @@ Resources:
         -
           Key: "Name"
           Value: "MyApp"
-  WebAppLogGroup:
-    Type: AWS::Logs::LogGroup
-    Properties: 
-      LogGroupName: "csye6225-fall2018"
-      RetentionInDays: 5
   WebAppSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -196,24 +191,6 @@ Resources:
       DBSubnetGroupName: !Ref myDBSubnetGroup
       VPCSecurityGroups:
       - !Ref DBSecurityGroup
-
-  Csye6225Topic:
-    Type: AWS::SNS::Topic
-    Properties:
-      TopicName: "Csye6225Topic"
-      Subscription:
-      - Endpoint: arn:aws:lambda:us-east-1:398590284929:function:Csye6225LambdaFunction
-        Protocol: lambda
-
-  LambdaInvokePermission:
-    Type: AWS::Lambda::Permission
-    Properties:
-      Action: lambda:InvokeFunction
-      Principal: sns.amazonaws.com
-      SourceArn: !Ref Csye6225Topic
-      FunctionName: arn:aws:lambda:us-east-1:398590284929:function:Csye6225LambdaFunction
-
-
 
 
 Outputs:
