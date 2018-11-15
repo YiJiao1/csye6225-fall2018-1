@@ -5,8 +5,8 @@
 usage()
 {
 	echo "
-	Usage:$0 [URL] [(PostContent).json]
-	Example: $0 csye6225-fall2018-chengl.me:8080/csye6225Webapp-1.0-SNAPSHOT/transaction/{id}/attachment receipt.json
+	Usage:$0 [URL] [(PostContent).json] [username] [password]
+	Example: $0 csye6225-fall2018-chengl.me:8080/csye6225Webapp-1.0-SNAPSHOT/transaction/{id}/attachment receipt.json leoleoleocheng@gmail.com  leo38377
   
 	"
 }
@@ -20,13 +20,11 @@ fi
 url=$1
 
 
-
-
 aws s3 cp myS3Bucket/receipt2.jpg s3://csye6225-fall2018-chengl.me.csye6225.com/ --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers >>/dev/null 
 
 
 
-curl -iX POST "$url" -H "Content-Type: application/json" -d @receipt.json 
+curl -iX POST "$url" -H "Content-Type: application/json" -d @receipt.json -H "username:$3" -H "password:$4"
 
 
 
