@@ -59,7 +59,7 @@ public class TransactionController {
                                                  @PathVariable(value="id") Long id)
     {
 
-        cloudWatchService.putMetricData("GetRequest","/transaction/{id}",++get_transaction);
+        //cloudWatchService.putMetricData("GetRequest","/transaction/{id}",++get_transaction);
         if(!userService.userIsValid(username,password)){return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username and password");}
 
 
@@ -94,9 +94,8 @@ public class TransactionController {
             {
                 r.setTransaction(transaction);
             }
-
-
-
+            userService.findUser(username).getTransactions().add(transaction);
+            transaction.setUser(userService.findUser(username));
             transactionRepository.save(transaction);
             return ResponseEntity.status(HttpStatus.CREATED).body(transaction);
 

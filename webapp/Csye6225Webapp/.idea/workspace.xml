@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de77d454-a0f0-4149-b4ee-7b16fd136d0b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/models/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csye6225Web/models/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csye6225Web/models/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/TransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csye6225Web/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -115,14 +110,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="12" />
-          <entry key="java" value="9538" />
+          <entry key="java" value="9599" />
           <entry key="properties" value="138" />
           <entry key="xml" value="278" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9538" />
+          <entry key="JAVA" value="9599" />
           <entry key="PLAIN_TEXT" value="12" />
           <entry key="Properties" value="138" />
           <entry key="XML" value="278" />
@@ -209,7 +204,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="196">
@@ -218,11 +213,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/TransactionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="97" selection-start-line="97" selection-end-line="97" />
+            <state relative-caret-position="453">
+              <caret line="98" column="52" selection-start-line="98" selection-start-column="52" selection-end-line="98" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -239,8 +234,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/models/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="649">
-              <caret line="47" column="70" selection-start-line="47" selection-start-column="70" selection-end-line="47" selection-end-column="70" />
+            <state relative-caret-position="257">
+              <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -251,8 +246,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/models/Transaction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+            <state relative-caret-position="957">
+              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
               <folding>
                 <element signature="e#1694#1695#0" expanded="true" />
                 <element signature="e#1726#1727#0" expanded="true" />
@@ -306,9 +301,9 @@
         <option value="$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/csye6225Web/models/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/csye6225Web/services/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/TransactionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/csye6225Web/models/Transaction.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/TransactionController.java" />
       </list>
     </option>
   </component>
@@ -331,8 +326,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-146" />
-    <option name="y" value="687" />
+    <option name="x" value="141" />
+    <option name="y" value="200" />
     <option name="width" value="2028" />
     <option name="height" value="1045" />
   </component>
@@ -429,7 +424,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542602461019" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542603104266" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -493,10 +488,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-78" y="69" width="2028" height="1045" extended-state="0" />
+    <frame x="-152" y="89" width="2028" height="1045" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25050506" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25050506" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -505,7 +500,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25027686" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25027686" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -641,34 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/TransactionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="97" selection-start-line="97" selection-end-line="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/models/Transaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="e#1694#1695#0" expanded="true" />
-            <element signature="e#1726#1727#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/models/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="47" column="70" selection-start-line="47" selection-start-column="70" selection-end-line="47" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/services/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -680,6 +647,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/models/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/models/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="957">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+          <folding>
+            <element signature="e#1694#1695#0" expanded="true" />
+            <element signature="e#1726#1727#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/TransactionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="98" column="52" selection-start-line="98" selection-start-column="52" selection-end-line="98" selection-end-column="52" />
         </state>
       </provider>
     </entry>
