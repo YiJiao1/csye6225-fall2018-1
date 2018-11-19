@@ -27,6 +27,7 @@ public class TransactionController {
     @Autowired
     private ReceiptRepository receiptRepository;
 
+
     @Autowired
     CloudWatchService cloudWatchService;
 
@@ -43,10 +44,10 @@ public class TransactionController {
     public List<Transaction> getAllTransactions(@RequestHeader(value="username",required = true) String username,
                                                 @RequestHeader(value="password",required = true) String password)
     {
-
-        cloudWatchService.putMetricData("GetRequest","/transactions",++get_transactions);
+      //  cloudWatchService.putMetricData("GetRequest","/transactions",++get_transactions);
         if(!userService.userIsValid(username,password)){return null;}
-        return transactionRepository.findAll();
+
+        return userService.findUser(username).getTransactions();
 
     }
 
@@ -61,12 +62,17 @@ public class TransactionController {
         cloudWatchService.putMetricData("GetRequest","/transaction/{id}",++get_transaction);
         if(!userService.userIsValid(username,password)){return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username and password");}
 
-       Optional<Transaction> transaction=transactionRepository.findById(id);
-        if (!transaction.isPresent()) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("ID NOT FOUND\n");
-        } else {
-            return ResponseEntity.status(HttpStatus.OK).body(transaction);
+
+        for(Transaction tran:userService.findUser(username).getTransactions())
+        {
+            if(tran.getId()==id)
+            {
+                return ResponseEntity.status(HttpStatus.OK).body(tran);
+            }
         }
+
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("ID NOT FOUND\n");
+
 
     }
 
@@ -77,8 +83,10 @@ public class TransactionController {
                                                        @RequestBody Transaction transaction)
     {
 
-        cloudWatchService.putMetricData("PostRequest","/transaction",++post_transaction);
+        //cloudWatchService.putMetricData("PostRequest","/transaction",++post_transaction);
         if(!userService.userIsValid(username,password)){return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username and password");}
+
+
 
         try {
 
@@ -86,6 +94,8 @@ public class TransactionController {
             {
                 r.setTransaction(transaction);
             }
+
+
 
             transactionRepository.save(transaction);
             return ResponseEntity.status(HttpStatus.CREATED).body(transaction);

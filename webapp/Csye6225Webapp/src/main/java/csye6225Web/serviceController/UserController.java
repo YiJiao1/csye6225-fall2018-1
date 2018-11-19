@@ -29,7 +29,7 @@ public class UserController {
     {
         cloudWatchService.putMetricData("PostRequest","/user/register",++post_user_register);
 
-        if(userService.userNameExist(username)||!userService.userNameisValid(username))
+        if(userService.findUser(username)!=null||!userService.userNameisValid(username))
         {
             return ResponseEntity.status(HttpStatus.OK).body("Invalid Username!\n");
         }

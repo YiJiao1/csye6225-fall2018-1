@@ -32,16 +32,16 @@ public class UserService {
         return true;
     }
 
-    public boolean userNameExist(String username)
+    public User findUser(String username)
     {
         for(User u:userRepository.findAll())
         {
             if (u.getUsername().equals(username))
             {
-                return true;
+                return u;
             }
         }
-        return false;
+        return null;
     }
 
 
