@@ -4,6 +4,7 @@ import csye6225Web.models.Receipt;
 import csye6225Web.models.Transaction;
 import csye6225Web.repositories.ReceiptRepository;
 import csye6225Web.repositories.TransactionRepository;
+import csye6225Web.repositories.UserRepository;
 import csye6225Web.services.CloudWatchService;
 import csye6225Web.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,8 @@ public class TransactionController {
     @Autowired
     private ReceiptRepository receiptRepository;
 
+    @Autowired
+    private UserRepository userRepository;
 
     @Autowired
     CloudWatchService cloudWatchService;
