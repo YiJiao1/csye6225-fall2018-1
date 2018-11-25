@@ -44,16 +44,20 @@ public class ReceiptController {
         cloudWatchService.putMetricData("GetRequest","/transaction/{id}/attachments",++get_attachments);
         if(!userService.userIsValid(username,password)){return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username and password");}
 
-        Optional<Transaction> transaction=transactionRepository.findById(id);
 
-        if(!transaction.isPresent())
+
+        for(Transaction tran: userService.findUser(username).getTransactions())
         {
-            return ResponseEntity.notFound().build();
+            if(tran.getId()==id)
+            {
+                return ResponseEntity.ok().body(tran.getAttachments());
+            }
+
         }
-        else
-        {
-            return ResponseEntity.ok().body(transaction.get().getAttachments());
-        }
+
+
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("ID NOT FOUND");
+
 
     }
 
@@ -67,25 +71,33 @@ public class ReceiptController {
 
         cloudWatchService.putMetricData("PostRequest","/transaction/{id}/attachment",++post_attachment);
         if(!userService.userIsValid(username,password)){return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username and password");}
-        Optional<Transaction> transaction=transactionRepository.findById(id);
 
-        if(!transaction.isPresent())
+
+        for(Transaction tran: userService.findUser(username).getTransactions())
         {
-            return ResponseEntity.notFound().build();
-        }
-        else
-        {
-            try {
-                receipt.setTransaction(transaction.get());
-                transaction.get().getAttachments().add(receipt);
-                receiptRepository.save(receipt);
-                return ResponseEntity.ok().body(receipt);
-            }catch (Exception e)
+            if(tran.getId()==id)
             {
-                return ResponseEntity.badRequest().body(e);
-            }
-        }
+                try
+                {
+                    receipt.setTransaction(tran);
+                    tran.getAttachments().add(receipt);
+                    receiptRepository.save(receipt);
+                    return ResponseEntity.ok().body(receipt);
 
+                } catch (Exception e)
+                {
+                    return ResponseEntity.badRequest().body(e);
+                }
+
+
+            }
+         }
+
+
+         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("ID NOT FOUND");
+
+
+     
     }
 
     @PutMapping("transaction/{id}/attachment/{attachmentID}")
@@ -99,24 +111,34 @@ public class ReceiptController {
         cloudWatchService.putMetricData("PutRequest","/transaction/{id}/attachment/{attachmentID}",++put_attachment);
         if(!userService.userIsValid(username,password)){return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username and password");}
 
-        Optional<Transaction> transaction=transactionRepository.findById(id);
-        Optional<Receipt> old_receipt=receiptRepository.findById(attachID);
+           for(Transaction tran: userService.findUser(username).getTransactions())
+           {
+               if(tran.getId()==id)
+               {
+                   try
+                   {
+                       receipt.setId(attachID);
+                       receipt.setTransaction(tran);
+                       receiptRepository.save(receipt);
+                       return ResponseEntity.ok().body(receipt);
 
-        if(!transaction.isPresent() || !old_receipt.isPresent())
-        {
-            return ResponseEntity.notFound().build();
-        }
-        else
-        {
-         receipt.setId(attachID);
-         receipt.setTransaction(transaction.get());
-         receiptRepository.save(receipt);
-         return ResponseEntity.ok().body(receipt);
-        }
+                   } catch (Exception e)
+                   {
+                       return ResponseEntity.badRequest().body(e);
+                   }
 
 
+               }
+            }
 
+
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("ID NOT FOUND");
+           
     }
+
+
+
+
 
     @DeleteMapping("transaction/{id}/attachment/{attachmentID}")
     public ResponseEntity<Object> deleteAttachment(@RequestHeader(value="username",required = true) String username,
@@ -126,22 +148,44 @@ public class ReceiptController {
     {
 
         cloudWatchService.putMetricData("DeleteRequest","/transaction/{id}/attachment/{attachmentID}",++delete_attachment);
-        if(!userService.userIsValid(username,password)){return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username and password");}
+        if(!userService.userIsValid(username,password)){return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username and password\n");}
 
-        Optional<Transaction> transaction= transactionRepository.findById(id);
-        Optional<Receipt>     receipt=receiptRepository.findById(attachID);
 
-        if(!transaction.isPresent()||!receipt.isPresent())
+
+        for(Transaction tran: userService.findUser(username).getTransactions())
         {
-            return ResponseEntity.notFound().build();
 
-        }
-        else
-        {
-            transaction.get().getAttachments().remove(receipt.get());
-            receiptRepository.deleteById(attachID);
-            return ResponseEntity.noContent().build();
-        }
+            if(tran.getId()==id)
+            {
+                try
+                {
+
+
+                    for(Receipt r:tran.getAttachments())
+                    {
+                        if (r.getId() == attachID)
+                        {
+
+                            tran.getAttachments().remove(r);
+                            receiptRepository.deleteById(attachID);
+                            return ResponseEntity.noContent().build();
+
+                        }
+                    }
+
+                   return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Attachment ID NOT FOUND\n");
+
+                } catch (Exception e)
+                {
+                    return ResponseEntity.badRequest().body(e);
+                }
+
+
+            }
+         }
+
+
+         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Transaction ID NOT FOUND\n");
 
     }
 
