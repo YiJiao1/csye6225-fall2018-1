@@ -4,8 +4,8 @@
 usage()
 {
 echo "
-Usage:$0 [URL]
-Example : $0 csye6225-fall2018-chengl.me:8080/csye6225Webapp-1.0-SNAPSHOT/transactions
+Usage:$0 [URL] [userName] [Password]
+Example : $0 csye6225-fall2018-chengl.me:8080/csye6225Webapp-1.0-SNAPSHOT/transactions leoleoleocheng@gmail.com leo38377
 "
 }
 
@@ -15,10 +15,10 @@ if [ $# -lt 1 ];then
         exit 1
 fi
 
-
 url=$1
+username=$2
+password=$3
 
-
-curl -iX GET "$url"
+curl -iX GET "$url" -H "username:$2" -H "password:$3"
 
 

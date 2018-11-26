@@ -1,10 +1,15 @@
 package csye6225Web.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.*;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import javax.persistence.*;
 import javax.validation.constraints.Null;
 import java.util.ArrayList;
 import java.util.List;
+
+
 
 
 
@@ -25,6 +30,14 @@ public class Transaction {
 
   @OneToMany(mappedBy = "transaction",cascade = CascadeType.ALL,orphanRemoval = true)
   private List<Receipt> attachments=new ArrayList<>();
+
+  @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "user_id",referencedColumnName = "id")
+  @OnDelete(action= OnDeleteAction.CASCADE)
+  @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class,property = "id")
+  @JsonIdentityReference(alwaysAsId = true)
+  @JsonProperty("user_id")
+  private User user;
 
 
   public Transaction(){}
@@ -53,6 +66,10 @@ public class Transaction {
         this.attachments.remove(receipt);
         receipt.setTransaction(null);
 
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public String getAmount() {

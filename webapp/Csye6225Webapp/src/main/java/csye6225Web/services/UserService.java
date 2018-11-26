@@ -22,16 +22,26 @@ public class UserService {
 
 
 
-    public boolean userNameExist(String username)
+    public boolean userNameisValid(String username)
+    {
+        if(!username.contains("@"))
+        {
+            return false;
+        }
+
+        return true;
+    }
+
+    public User findUser(String username)
     {
         for(User u:userRepository.findAll())
         {
             if (u.getUsername().equals(username))
             {
-                return true;
+                return u;
             }
         }
-        return false;
+        return null;
     }
 
 

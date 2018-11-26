@@ -5,8 +5,8 @@
 usage()
 {
 	echo "
-	Usage:$0 [URL] [(PostContent).json]
-	Example: $0 csye6225-fall2018-chengl.me:8080/csye6225Webapp-1.0-SNAPSHOT/transaction/{id} transaction2.json
+	Usage:$0 [URL] [(PostContent).json] [username] [password]
+	Example: $0 csye6225-fall2018-chengl.me:8080/csye6225Webapp-1.0-SNAPSHOT/transaction/{id} transaction2.json leoleoleocheng@gmail.com leo38377
   
 	"
 }
@@ -19,9 +19,5 @@ fi
 
 url=$1
 
-
-
-
-
-curl -iX PUT "$url"  -H "Content-Type: application/json" -d @$2
+curl -iX PUT "$url" -H "Content-Type: application/json" -d @$2  -H "username:$3" -H "password:$4"
 

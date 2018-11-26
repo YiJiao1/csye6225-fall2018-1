@@ -29,9 +29,9 @@ public class UserController {
     {
         cloudWatchService.putMetricData("PostRequest","/user/register",++post_user_register);
 
-        if(userService.userNameExist(username))
+        if(userService.findUser(username)!=null||!userService.userNameisValid(username))
         {
-            return ResponseEntity.status(HttpStatus.OK).body("Username exists!\n");
+            return ResponseEntity.status(HttpStatus.OK).body("Invalid Username!\n");
         }
 
         userService.saveUser(username,password);

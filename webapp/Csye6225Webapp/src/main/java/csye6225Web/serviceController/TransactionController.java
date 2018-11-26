@@ -4,12 +4,14 @@ import csye6225Web.models.Receipt;
 import csye6225Web.models.Transaction;
 import csye6225Web.repositories.ReceiptRepository;
 import csye6225Web.repositories.TransactionRepository;
+import csye6225Web.repositories.UserRepository;
 import csye6225Web.services.CloudWatchService;
 import csye6225Web.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 
 import java.util.ArrayList;
@@ -28,6 +30,9 @@ public class TransactionController {
     private ReceiptRepository receiptRepository;
 
     @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
     CloudWatchService cloudWatchService;
 
     @Autowired
@@ -43,10 +48,10 @@ public class TransactionController {
     public List<Transaction> getAllTransactions(@RequestHeader(value="username",required = true) String username,
                                                 @RequestHeader(value="password",required = true) String password)
     {
-
         cloudWatchService.putMetricData("GetRequest","/transactions",++get_transactions);
         if(!userService.userIsValid(username,password)){return null;}
-        return transactionRepository.findAll();
+
+        return userService.findUser(username).getTransactions();
 
     }
 
@@ -61,12 +66,17 @@ public class TransactionController {
         cloudWatchService.putMetricData("GetRequest","/transaction/{id}",++get_transaction);
         if(!userService.userIsValid(username,password)){return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username and password");}
 
-       Optional<Transaction> transaction=transactionRepository.findById(id);
-        if (!transaction.isPresent()) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("ID NOT FOUND\n");
-        } else {
-            return ResponseEntity.status(HttpStatus.OK).body(transaction);
+
+        for(Transaction tran:userService.findUser(username).getTransactions())
+        {
+            if(tran.getId()==id)
+            {
+                return ResponseEntity.status(HttpStatus.OK).body(tran);
+            }
         }
+
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("ID NOT FOUND\n");
+
 
     }
 
@@ -80,13 +90,16 @@ public class TransactionController {
         cloudWatchService.putMetricData("PostRequest","/transaction",++post_transaction);
         if(!userService.userIsValid(username,password)){return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username and password");}
 
+
+
         try {
 
             for(Receipt r:transaction.getAttachments())
             {
                 r.setTransaction(transaction);
             }
-
+            userService.findUser(username).getTransactions().add(transaction);
+            transaction.setUser(userService.findUser(username));
             transactionRepository.save(transaction);
             return ResponseEntity.status(HttpStatus.CREATED).body(transaction);
 
@@ -104,28 +117,28 @@ public class TransactionController {
                                                     @RequestBody Transaction transaction ,@PathVariable Long id)
     {
 
-
         cloudWatchService.putMetricData("PutRequest","/transaction/{id}",++put_transaction);
         if(!userService.userIsValid(username,password)){return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username and password");}
 
-        Optional<Transaction> old_transaction=transactionRepository.findById(id);
 
-        if(!old_transaction.isPresent())
+        for(Transaction tran: userService.findUser(username).getTransactions())
         {
-            return ResponseEntity.notFound().build();
-        }
-        else
-        {
-
-            transaction.setId(id);
-            for(Receipt r: transaction.getAttachments())
+            if(id==tran.getId())
             {
-                r.setTransaction(transaction);
-            }
+                transaction.setId(id);
+                transaction.setUser(userService.findUser(username));
+                for(Receipt r: transaction.getAttachments())
+                {
+                    r.setTransaction(transaction);
+                }
 
-              transactionRepository.save(transaction);
-              return ResponseEntity.status(HttpStatus.CREATED).body("Update Success!!\n");
+                transactionRepository.save(transaction);
+                return ResponseEntity.status(HttpStatus.CREATED).body("Update Success!!\n");
+            }
         }
+
+        return ResponseEntity.notFound().build();
+
     }
 
 
@@ -141,22 +154,26 @@ public class TransactionController {
         cloudWatchService.putMetricData("DeleteRequest","/transaction/{id}",++delete_transaction);
         if(!userService.userIsValid(username,password)){return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username and password");}
 
-        Optional<Transaction> transaction=transactionRepository.findById(id);
-        if (!transaction.isPresent())
+
+        for(Transaction tran: userService.findUser(username).getTransactions())
         {
-            return ResponseEntity.notFound().build();
-        }
-        else
-        {
-            for(Receipt r:transaction.get().getAttachments())
+            if(id==tran.getId())
             {
-                receiptRepository.delete(r);
+
+                userService.findUser(username).getTransactions().remove(tran);
+                for(Receipt r: tran.getAttachments())
+                {
+                    receiptRepository.delete(r);
+                }
+
+                return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Delete_Success!!\n");
             }
-            transactionRepository.deleteById(id);
-            return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Delete_Success!!\n");
         }
 
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("ID NOT FOUND!!\n");
+
     }
+
 
 
 

@@ -4,6 +4,8 @@ package csye6225Web.models;
 
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="Users")
@@ -16,6 +18,8 @@ public class User {
     private String username;
     private String password;
 
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,orphanRemoval = true)
+    private List<Transaction> transactions=new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -40,4 +44,6 @@ public class User {
     public void setUsername(String username) {
         this.username = username;
     }
+
+    public List<Transaction> getTransactions() { return transactions; }
 }
