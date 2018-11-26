@@ -441,7 +441,7 @@ Resources:
       - FieldToMatch:
           Type: BODY
         ComparisonOperator: GT
-        Size: '100000'
+        Size: '200000'
         TextTransformation: NONE
     Type: AWS::WAFRegional::SizeConstraintSet
 

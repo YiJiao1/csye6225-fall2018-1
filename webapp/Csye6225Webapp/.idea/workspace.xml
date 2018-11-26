@@ -1,50 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de77d454-a0f0-4149-b4ee-7b16fd136d0b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../infrastructure/aws/cloudformation/csye6225-cf-auto-scaling.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../infrastructure/aws/cloudformation/csye6225-cf-auto-scaling.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../infrastructure/aws/cloudformation/csye6225-cf-create-auto-scaling-application-stack.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../infrastructure/aws/cloudformation/csye6225-cf-create-auto-scaling-application-stack.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/application-aws.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/application-dev.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/MainControl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/MyConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/config/AuthorizationServerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/config/ResourceServerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/config/WebSecurityConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/daos/AWSRDSDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/daos/AWSRDSImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/daos/AWSS3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/daos/AWSS3Impl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/daos/LocalDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/daos/LocalImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/daos/ReceiptDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/daos/ReceiptImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/daos/TransactionDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/daos/TransactionImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/daos/UserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/daos/UserImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/models/Receipt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/models/Transaction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/models/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/models/receip.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/repositories/ReceiptRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/repositories/TransactionRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/repositories/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/serviceController/HomeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/serviceController/ReceiptController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/serviceController/ServicesController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/serviceController/TransactionControllerUseDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/services/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/testControl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/csye6225webapp.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/TransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CurdClient/ELETE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-    </list>
+    <list default="true" id="de77d454-a0f0-4149-b4ee-7b16fd136d0b" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -98,7 +55,7 @@
     <session id="-833317390">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="39" />
+          <entry key="project.closed" value="40" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.101" value="1" />
           <entry key="project.open.time.105" value="1" />
@@ -136,7 +93,7 @@
           <entry key="class" value="4" />
           <entry key="iml" value="2" />
           <entry key="java" value="187" />
-          <entry key="properties" value="16" />
+          <entry key="properties" value="17" />
           <entry key="xml" value="13" />
           <entry key="yml" value="6" />
         </counts>
@@ -146,7 +103,7 @@
           <entry key="CLASS" value="4" />
           <entry key="IDEA_MODULE" value="2" />
           <entry key="JAVA" value="187" />
-          <entry key="Properties" value="16" />
+          <entry key="Properties" value="17" />
           <entry key="XML" value="13" />
           <entry key="YAML" value="6" />
         </counts>
@@ -257,11 +214,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1988">
-              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="56">
+              <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -339,8 +305,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="19" />
-    <option name="y" value="340" />
+    <option name="x" value="31" />
+    <option name="y" value="177" />
     <option name="width" value="1798" />
     <option name="height" value="1033" />
   </component>
@@ -437,7 +403,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543216236978" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543249326997" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -501,8 +467,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="50" y="192" width="1798" height="1033" extended-state="0" />
-    <editor active="true" />
+    <frame x="31" y="177" width="1798" height="1033" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27657142" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -513,7 +478,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31088665" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31088665" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -719,17 +684,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1988">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
           <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1988">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
         </state>
       </provider>
     </entry>
