@@ -19,8 +19,14 @@ Parameters:
     Type: String
   instanceProfile:
     Type: String        
-Resources:
+  WebACLName:
+    Type: String
+    Default: CommonAttackProtection
+    Description: Enter the name you want to use for the WebACL. This value is also
+      added as a prefix for the names of the rules, conditions, and CloudWatch metrics
+      created by this template.
 
+Resources:
 
   ApplicationLoadBalancer:
     Type: AWS::ElasticLoadBalancingV2::LoadBalancer
@@ -129,13 +135,13 @@ Resources:
   CPUAlarmHigh:
     Type: AWS::CloudWatch::Alarm
     Properties:
-      AlarmDescription: Scale-up if CPU > 90% for 10 minutes
+      AlarmDescription: Scale-up if CPU > 30% for 4 minutes
       MetricName: CPUUtilization
       Namespace: AWS/EC2
       Statistic: Average
-      Period: '300'
+      Period: '120'
       EvaluationPeriods: '2'
-      Threshold: '90'
+      Threshold: '30'
       AlarmActions:
       - Ref: WebServerScaleUpPolicy
       Dimensions:
@@ -146,20 +152,20 @@ Resources:
   CPUAlarmLow:
     Type: AWS::CloudWatch::Alarm
     Properties:
-      AlarmDescription: Scale-down if CPU < 70% for 10 minutes
+      AlarmDescription: Scale-down if CPU < 30% for 4 minutes
       MetricName: CPUUtilization
       Namespace: AWS/EC2
       Statistic: Average
-      Period: '300'
+      Period: '120'
       EvaluationPeriods: '2'
-      Threshold: '70'
+      Threshold: '30'
       AlarmActions:
       - Ref: WebServerScaleDownPolicy
       Dimensions:
       - Name: AutoScalingGroupName
         Value:
           Ref: WebServerGroup
-      ComparisonOperator: GreaterThanThreshold
+      ComparisonOperator: LessThanThreshold
 
   LaunchConfig:
     Type: AWS::AutoScaling::LaunchConfiguration
@@ -278,6 +284,10 @@ Resources:
         ReadCapacityUnits: 5
         WriteCapacityUnits: 5
       TableName: "UserTable"
+      TimeToLiveSpecification: 
+        AttributeName: 'TimeToLive'
+        Enabled: true
+
 
   DBSecurityGroup:
     Type: AWS::EC2::SecurityGroup
@@ -311,6 +321,187 @@ Resources:
       VPCSecurityGroups:
       - !Ref DBSecurityGroup
 
+  MyWebACL:
+    Properties:
+      Name:
+        Ref: WebACLName
+      DefaultAction:
+        Type: ALLOW
+      MetricName:
+        Ref: WebACLName
+      Rules:
+      - Action:
+          Type: BLOCK
+        Priority: 1
+        RuleId:
+          Ref: ManualIPBlockRule
+      - Action:
+          Type: BLOCK
+        Priority: 2
+        RuleId:
+          Ref: SizeMatchRule
+      - Action:
+          Type: BLOCK
+        Priority: 3
+        RuleId:
+          Ref: SqliRule
+      - Action:
+          Type: BLOCK
+        Priority: 4
+        RuleId:
+          Ref: XssRule
+    Type: AWS::WAFRegional::WebACL
+  SqliRule:
+    Properties:
+      Name:
+        Fn::Join:
+        - ''
+        - - Ref: WebACLName
+          - SqliRule
+      MetricName:
+        Fn::Join:
+        - ''
+        - - Ref: WebACLName
+          - SqliRule
+      Predicates:
+      - DataId:
+          Ref: SqliMatchSet
+        Negated: false
+        Type: SqlInjectionMatch
+    Type: AWS::WAFRegional::Rule
+  XssRule:
+    Properties:
+      Name:
+        Fn::Join:
+        - ''
+        - - Ref: WebACLName
+          - XssRule
+      MetricName:
+        Fn::Join:
+        - ''
+        - - Ref: WebACLName
+          - XssRule
+      Predicates:
+      - DataId:
+          Ref: XssMatchSet
+        Negated: false
+        Type: XssMatch
+    Type: AWS::WAFRegional::Rule
+  SizeMatchRule:
+    Properties:
+      Name:
+        Fn::Join:
+        - ''
+        - - Ref: WebACLName
+          - LargeBodyMatchRule
+      MetricName:
+        Fn::Join:
+        - ''
+        - - Ref: WebACLName
+          - DetectLargeBody
+      Predicates:
+      - DataId:
+          Ref: SizeMatchSet
+        Negated: false
+        Type: SizeConstraint
+    Type: AWS::WAFRegional::Rule
+  ManualIPBlockRule:
+    Properties:
+      Name:
+        Fn::Join:
+        - ''
+        - - Ref: WebACLName
+          - ManualIPBlockRule
+      MetricName:
+        Fn::Join:
+        - ''
+        - - Ref: WebACLName
+          - ManualIPBlockRule
+      Predicates:
+      - DataId:
+          Ref: WAFManualIPBlockSet
+        Negated: false
+        Type: IPMatch
+    Type: AWS::WAFRegional::Rule
+
+  
+  WAFManualIPBlockSet:
+    Properties:
+      Name: Manual IP Block Set
+    Type: AWS::WAFRegional::IPSet
+
+  SizeMatchSet:
+    Properties:
+      Name:
+        Fn::Join:
+        - ''
+        - - Ref: WebACLName
+          - LargeBodyMatch
+      SizeConstraints:
+      - FieldToMatch:
+          Type: BODY
+        ComparisonOperator: GT
+        Size: '100000'
+        TextTransformation: NONE
+    Type: AWS::WAFRegional::SizeConstraintSet
+
+  SqliMatchSet:
+    Properties:
+      Name:
+        Fn::Join:
+        - ''
+        - - Ref: WebACLName
+          - SqliMatch
+      SqlInjectionMatchTuples:
+      - FieldToMatch:
+          Type: QUERY_STRING
+        TextTransformation: URL_DECODE
+      - FieldToMatch:
+          Type: QUERY_STRING
+        TextTransformation: HTML_ENTITY_DECODE
+      - FieldToMatch:
+          Type: BODY
+        TextTransformation: URL_DECODE
+      - FieldToMatch:
+          Type: BODY
+        TextTransformation: HTML_ENTITY_DECODE
+      - FieldToMatch:
+          Type: URI
+        TextTransformation: URL_DECODE
+    Type: AWS::WAFRegional::SqlInjectionMatchSet
+
+  XssMatchSet:
+    Properties:
+      Name:
+        Fn::Join:
+        - ''
+        - - Ref: WebACLName
+          - XssMatch
+      XssMatchTuples:
+      - FieldToMatch:
+          Type: QUERY_STRING
+        TextTransformation: URL_DECODE
+      - FieldToMatch:
+          Type: QUERY_STRING
+        TextTransformation: HTML_ENTITY_DECODE
+      - FieldToMatch:
+          Type: BODY
+        TextTransformation: URL_DECODE
+      - FieldToMatch:
+          Type: BODY
+        TextTransformation: HTML_ENTITY_DECODE
+      - FieldToMatch:
+          Type: URI
+        TextTransformation: URL_DECODE
+    Type: AWS::WAFRegional::XssMatchSet
+
+  MyWebACLAssociation:
+    Type: AWS::WAFRegional::WebACLAssociation
+    Properties:
+      ResourceArn: 
+        Ref: ApplicationLoadBalancer
+      WebACLId:
+        Ref: MyWebACL
 
 Outputs:
   DBEndPoint:

@@ -66,5 +66,12 @@ curl -iX DELETE 'localhost:8080/transaction/{id}' -H "Authorization: Bearer {acc
 
 
 
+Web Application Firewall Penetration Testing:
+
+DocumentLink:
+https://docs.google.com/document/d/1PRHynJcS4KeRVJE18ZMzF_qXtMWCOrT0RIASiyN9AGM/edit?usp=sharing
+
+
+
 
 

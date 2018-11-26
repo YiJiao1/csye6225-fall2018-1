@@ -2,26 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de77d454-a0f0-4149-b4ee-7b16fd136d0b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../infrastructure/aws/cloudformation/csye6225-cf-auto-scaling.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../infrastructure/aws/cloudformation/csye6225-cf-auto-scaling.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../infrastructure/aws/cloudformation/csye6225-cf-create-auto-scaling-application-stack.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../infrastructure/aws/cloudformation/csye6225-cf-create-auto-scaling-application-stack.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/application-aws.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/application-dev.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/MainControl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/MyConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/config/AuthorizationServerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/config/ResourceServerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/config/WebSecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/daos/AWSRDSDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/daos/AWSRDSImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/daos/AWSS3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/daos/AWSS3Impl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/daos/LocalDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/daos/LocalImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/daos/ReceiptDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/daos/ReceiptImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/daos/TransactionDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/daos/TransactionImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/daos/UserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/daos/UserImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/models/Receipt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/models/Transaction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/models/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/models/receip.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/repositories/ReceiptRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/repositories/TransactionRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/repositories/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/serviceController/HomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/serviceController/ReceiptController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/serviceController/ServicesController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/serviceController/TransactionControllerUseDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/services/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/classes/csye6225Web/testControl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web-x/Csye6225Webapp/target/csye6225webapp.war" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/models/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csye6225Web/models/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/ReceiptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/ReceiptController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/TransactionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/csye6225Web/MainControl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/csye6225Web/models/Receipt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/csye6225Web/models/Transaction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/csye6225Web/models/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/csye6225Web/repositories/ReceiptRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/csye6225Web/repositories/TransactionRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/csye6225Web/repositories/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/csye6225Web/serviceController/ReceiptController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/csye6225Web/serviceController/TransactionController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/csye6225Web/serviceController/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/csye6225Web/services/CloudWatchService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/csye6225Web/services/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CurdClient/ELETE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -76,7 +98,7 @@
     <session id="-833317390">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="37" />
+          <entry key="project.closed" value="39" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.101" value="1" />
           <entry key="project.open.time.105" value="1" />
@@ -89,12 +111,12 @@
           <entry key="project.open.time.39" value="2" />
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.42" value="2" />
-          <entry key="project.open.time.45" value="1" />
+          <entry key="project.open.time.45" value="2" />
           <entry key="project.open.time.46" value="2" />
           <entry key="project.open.time.48" value="3" />
           <entry key="project.open.time.49" value="1" />
           <entry key="project.open.time.51" value="1" />
-          <entry key="project.open.time.53" value="2" />
+          <entry key="project.open.time.53" value="3" />
           <entry key="project.open.time.58" value="1" />
           <entry key="project.open.time.60" value="1" />
           <entry key="project.open.time.66" value="1" />
@@ -106,16 +128,16 @@
           <entry key="project.open.time.87" value="1" />
           <entry key="project.open.time.9" value="1" />
           <entry key="project.open.time.96" value="1" />
-          <entry key="project.opened" value="40" />
+          <entry key="project.opened" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="4" />
           <entry key="iml" value="2" />
-          <entry key="java" value="184" />
-          <entry key="properties" value="15" />
-          <entry key="xml" value="12" />
+          <entry key="java" value="187" />
+          <entry key="properties" value="16" />
+          <entry key="xml" value="13" />
           <entry key="yml" value="6" />
         </counts>
       </usages-collector>
@@ -123,25 +145,25 @@
         <counts>
           <entry key="CLASS" value="4" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="184" />
-          <entry key="Properties" value="15" />
-          <entry key="XML" value="12" />
+          <entry key="JAVA" value="187" />
+          <entry key="Properties" value="16" />
+          <entry key="XML" value="13" />
           <entry key="YAML" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="12" />
-          <entry key="java" value="10849" />
-          <entry key="properties" value="146" />
+          <entry key="java" value="11164" />
+          <entry key="properties" value="155" />
           <entry key="xml" value="278" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10849" />
+          <entry key="JAVA" value="11164" />
           <entry key="PLAIN_TEXT" value="12" />
-          <entry key="Properties" value="146" />
+          <entry key="Properties" value="155" />
           <entry key="XML" value="278" />
         </counts>
       </usages-collector>
@@ -204,12 +226,42 @@
     <favorites_list name="Csye6225Webapp" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/models/SensorData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="672">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/SensorDataController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/TransactionController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2660">
+              <caret line="177" selection-start-line="177" selection-end-line="177" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1988">
+              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
             </state>
           </provider>
         </entry>
@@ -263,8 +315,8 @@
         <option value="$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/SensorDataController.java" />
         <option value="$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/ReceiptController.java" />
         <option value="$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/TransactionController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -287,10 +339,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="130" />
-    <option name="y" value="174" />
-    <option name="width" value="1616" />
-    <option name="height" value="801" />
+    <option name="x" value="19" />
+    <option name="y" value="340" />
+    <option name="width" value="1798" />
+    <option name="height" value="1033" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -300,6 +352,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -381,11 +434,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542693442796" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543216236978" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -449,10 +501,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="130" y="174" width="1616" height="801" extended-state="0" />
+    <frame x="50" y="192" width="1798" height="1033" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32206634" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27657142" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -461,7 +513,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30409357" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31088665" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -469,7 +521,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.17829457" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.17782657" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -480,7 +532,7 @@
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.05" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32206634" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2767094" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -584,13 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/models/SensorData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/repositories/SensorDataRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -640,13 +685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1721">
@@ -657,27 +695,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/TransactionController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/models/SensorData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="152" column="8" selection-start-line="152" selection-start-column="8" selection-end-line="152" selection-end-column="8" />
+        <state relative-caret-position="672">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/SensorDataController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="420">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/csye6225Web/serviceController/TransactionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2660">
+          <caret line="177" selection-start-line="177" selection-end-line="177" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="56">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1988">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
         </state>
       </provider>
     </entry>
