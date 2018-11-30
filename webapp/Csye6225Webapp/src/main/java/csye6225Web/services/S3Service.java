@@ -21,7 +21,7 @@ public class S3Service {
 
 
 
-    final static String s3BucketName="csye6225-fall2018-chengl.me.csye6225.com";
+    final static String s3BucketName="csye6225-fall2018-jiaoyi.me.csye6225.com";
 
 
 
